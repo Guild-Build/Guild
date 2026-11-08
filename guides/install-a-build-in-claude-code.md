@@ -46,7 +46,7 @@ Hooks, MCP servers and anything under a plugin's `bin/` run with your privileges
 
 ## Without the marketplace: the buildguild CLI
 
-Run from a checkout of the Build repository; the `buildguild` npm package is not published yet, so do not run it with `npx`.
+Run from a checkout of [github.com/Guild-Build/Build](https://github.com/Guild-Build/Build); the `buildguild` npm package is not published yet, so do not run it with `npx`.
 
 ```
 node cli/buildguild.mjs add measured-delivery --scope project
