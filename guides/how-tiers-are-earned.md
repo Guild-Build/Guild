@@ -1,9 +1,9 @@
 ---
 title: "How tiers are earned: the rules behind D, C, B, A and S"
-digest: "A tier on buildguild.gg is computed from trial evidence, never typed in and never bought. Declared needs a valid manifest. Tested needs the author's own run, published from their GitHub account. Reproduced needs a second account. Proven adds a hidden slice run by the guild. Season leader is the top Proven build per category on the season's ranked trials. Trials have a ladder of their own: Declared, Calibrated, Adopted."
+digest: "A tier on buildguild.gg is computed from trial evidence, never typed in and never bought. Declared needs a valid manifest. Tested needs the author's own run, published from their GitHub account, or for the guild's own builds a run in its hosted trial runner. Reproduced needs a second account to land within tolerance of the build's latest author run. Proven adds a hidden slice run by the guild. Season leader is the top Proven build per category on the season's ranked trials. Trials have a ladder of their own: Declared, Calibrated, Adopted."
 author: GuildBuild
 published: 2026-10-22
-updated: 2026-10-22
+updated: 2026-11-27
 section: guild
 tags:
   - tiers
@@ -18,8 +18,8 @@ Every tier on this site is computed at build time from evidence files in the rep
 | Tier | Needs | Who can produce it |
 |---|---|---|
 | D · Declared | A valid plugin manifest, a licence, one named branch, an author | Any accepted submission |
-| C · Tested | The author ran the season trial on a named environment and published the evidence as a public Gist from their GitHub account | The author |
-| B · Reproduced | A second GitHub account reproduced the trial on its own machine within tolerance and published its own Gist | Any member who is not the author; we call them Assayers |
+| C · Tested | The author ran the season trial on a named environment and published the evidence as a public Gist from their GitHub account. For one of the guild's own builds, a run in the guild's hosted trial runner counts as its author's run | The author, or the guild for its own builds |
+| B · Reproduced | A GitHub account outside the build's authorship ran the build on the trial on its own machine, published the record from that account, and landed within tolerance of the build's latest author run, the run its page shows | Anyone outside the build's authorship, with no sign-in to the site; we call them Assayers. The guild decides whether a record is the author's run or a reproduction from the account that publishes it |
 | A · Proven | B, plus a pass on the season's hidden slice run by a guild maintainer, plus a published cost profile | Guild maintainers |
 | S · Season leader | The top A build per branch and category when the season closes | Computed |
 
@@ -29,7 +29,7 @@ An evidence file is the JSON report that `claude plugin eval` writes, wrapped wi
 
 ## Tolerance
 
-A reproduction counts when the overall score is within 0.10 of the author's and no dimension differs by more than 0.25. Below that, both results are published side by side and the build stays at C until a third run settles it.
+A reproduction is measured against the build's latest author run, the run its page shows. It counts when its overall score is within 0.10 of that run's and no dimension both runs measure differs by more than 0.25. Outside that, both runs are shown side by side and the build stays at C until a run lands within it. Every reproduction is checked against the build's latest author run, so when the author publishes a new run, an earlier reproduction keeps counting only if it is still within tolerance of that new run. A build can be Reproduced at a low score, which says that its low score was repeated.
 
 ## Ranked trials and custom games
 
