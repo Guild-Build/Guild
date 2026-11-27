@@ -29,7 +29,7 @@ An evidence file is the JSON report that `claude plugin eval` writes, wrapped wi
 
 ## Tolerance
 
-A reproduction is measured against the build's latest author run, the run its page shows. It counts when its overall score is within 0.10 of that run's and no dimension both runs measure differs by more than 0.25. Outside that, both runs are shown side by side and the build stays at C until a run lands within it. When the author publishes a newer run that moves by more than the tolerance, an older reproduction stops counting until someone reproduces the new score; and a build can be Reproduced at a low score, which says that its low score was repeated.
+A reproduction is measured against the build's latest author run, the run its page shows. It counts when its overall score is within 0.10 of that run's and no dimension both runs measure differs by more than 0.25. Outside that, both runs are shown side by side and the build stays at C until a run lands within it. Every reproduction is checked against the build's latest author run, so when the author publishes a new run, an earlier reproduction keeps counting only if it is still within tolerance of that new run. A build can be Reproduced at a low score, which says that its low score was repeated.
 
 ## Ranked trials and custom games
 
