@@ -3,7 +3,7 @@ title: "What is an agent build, and why rank builds instead of models"
 digest: "An agent build is the complete configuration around a model: the skills, subagents, hooks, MCP servers, playbooks and settings a coding agent runs with. The same model scores very differently under different builds, so the build, not the model, is what a working team actually chooses."
 author: GuildBuild
 published: 2026-10-22
-updated: 2026-10-22
+updated: 2026-11-27
 section: guild
 tags:
   - builds
@@ -35,7 +35,7 @@ A guild build is packaged as a Claude Code plugin (and, from Season 1, a Codex p
 
 ## How a build earns a tier
 
-Tiers move only on evidence from a trial run on a named machine. D is a valid, declared build. C means the author ran the season trial and published the evidence from their own GitHub account. B means a second account reproduced it within tolerance. A adds a hidden slice run by the guild. S is the season leader among A builds. The full rules are on the tiers page, and the trial design is published with every season.
+Tiers move only on evidence from a trial run on a named machine. D is a valid, declared build. C means the author ran the season trial and published the evidence from their own GitHub account, or, for the guild's own builds, the guild ran it in its hosted trial runner. B means an account outside the build's authorship landed within tolerance of the build's latest author run. A adds a hidden slice run by the guild. S is the season leader among A builds. The full rules are on the tiers page, and the trial design is published with every season.
 
 ## Cite this
 
